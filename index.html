@@ -14,37 +14,142 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="navbar bg-base-100 shadow-sm">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
+<body class="">
+    <nav class="shadow-sm bg-white">
+        <div class="navbar bg-base-100 max-w-7xl w-full mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 3</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="-1"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 3</a></li>
+                <a class="text-xl font-bold">SwiftCart</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <div class="navbar-end">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
         </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>Products</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-            </ul>
+    </nav>
+
+    <section class="h-[32rem] relative">
+        <img src="assets/banner-image.png" class="h-full w-full object-center object-cover absolute top-0 left-0">
+
+        <!-- <div class="max-w-7xl mx-auto">
+            <h1 class="">Best Collection For You</h1>
+            <p>Discover the latest trends in fashion, electronics and more. Shop with confidence and style at SwiftCart.
+            </p>    
+        </div> -->
+    </section>
+
+    <section class="bg-gray-100">
+        <div class="pt-[3rem] pb-[6rem] max-w-7xl mx-auto">
+            <h1 class="text-center text-3xl font-bold">Why Choose Us</h1>
+            <p class="text-center font-semibold text-gray-500 mt-2.5 mb-16">We provide the best shopping experience with
+                top-notch services.</p>
+
+            <div class="grid grid-cols-4 gap-7 px-2">
+                <div class="h-52 bg-white rounded-xl px-4 relative">
+                    <div
+                        class="absolute left-4 -translate-y-1/2 bg-[#d4dcf6] h-[3.5rem] w-[3.5rem] flex items-center justify-center border-4 border-white rounded-lg shadow-md">
+                        <i class="fa-regular fa-truck text-2xl text-blue-800"></i>
+                    </div>
+                    <h3 class="mt-12 mb-4 font-bold text-2xl">Fast Delivery</h3>
+                    <p class="text-lg text-gray-500 font-semibold">Get your orders delivered to your doorstep quickly
+                        and
+                        efficiently.</p>
+                </div>
+                <div class="h-52 bg-white rounded-xl px-4 relative">
+                    <div
+                        class="absolute left-4 -translate-y-1/2 bg-[#d4dcf6] h-[3.5rem] w-[3.5rem] flex items-center justify-center border-4 border-white rounded-lg shadow-md">
+                        <i class="fa-regular fa-headphones text-2xl text-blue-800"></i>
+                    </div>
+                    <h3 class="mt-12 mb-4 font-bold text-2xl">24/7 Support</h3>
+                    <p class="text-lg text-gray-500 font-semibold">Our support team is available around the clock to
+                        assist
+                        you.
+                    </p>
+                </div>
+                <div class="h-52 bg-white rounded-xl px-4 relative">
+                    <div
+                        class="absolute left-4 -translate-y-1/2 bg-[#d4dcf6] h-[3.5rem] w-[3.5rem] flex items-center justify-center border-4 border-white rounded-lg shadow-md">
+                        <i class="fa-solid fa-shield-halved text-2xl text-blue-800"></i>
+                    </div>
+                    <h3 class="mt-12 mb-4 font-bold text-2xl">Secure Payment</h3>
+                    <p class="text-lg text-gray-500 font-semibold">Experience safe and secure transactions with our
+                        encrypted
+                        payment systems.</p>
+                </div>
+                <div class="h-52 bg-white rounded-xl px-4 relative">
+                    <div
+                        class="absolute left-4 -translate-y-1/2 bg-[#d4dcf6] h-[3.5rem] w-[3.5rem] flex items-center justify-center border-4 border-white rounded-lg shadow-md">
+                        <i class="fa-solid fa-rotate text-2xl text-blue-800"></i>
+                    </div>
+                    <h3 class="mt-12 mb-4 font-bold text-2xl">Easy Returns</h3>
+                    <p class="text-lg text-gray-500 font-semibold">Not satisfied? Return your products easily within 30
+                        days.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="navbar-end">
-            <i class="fa-solid fa-cart-shopping"></i>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-1 mt-14">
+        <h1 class="text-3xl font-bold mb-6">Trending Now</h1>
+
+        <div class="grid grid-cols-3 gap-5">
+            
+            <div class="card bg-base-100">
+                <figure class="bg-gray-200 flex justify-center items-center h-[16rem] py-2">
+                    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" class="h-full" />
+                </figure>
+                <div class="p-3">
+                    <div class="flex items-center justify-between font-semibold text-lg">
+                        <div class="rounded-2xl w-40 flex items-center justify-center bg-[#d4dcf6]">
+                            <p class="text-blue-700">Men's Clothing</p>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <span class="text-gray-600">3.9 <span>(120)</span></span>
+                        </div>
+                    </div>
+                    <h1 class="text-lg font-semibold line-clamp-1 mt-4">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+                    </h1>
+                    <p class="text-xl font-bold mt-2 mb-8">$109.95</p>
+                    <div class="flex items-center justify-between">
+                        <button class="btn w-[48%] text-lg">
+                            <i class="fa-regular fa-eye"></i>
+                            <span>Details</span>
+                        </button>
+                        <button class="btn w-[48%] bg-blue-600 text-lg text-white hover:bg-blue-800">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
