@@ -51,7 +51,7 @@ const card = (product) => {
                         <h1 class="text-lg font-semibold line-clamp-1 mt-4">${product.title}</h1>
                         <p class="text-xl font-bold mt-2 mb-8">$${product.price}</p>
                         <div class="flex items-center justify-between">
-                            <button class="btn w-[48%] text-lg">
+                            <button onclick="displayModal(${product.id})" class="btn w-[48%] text-lg">
                                 <i class="fa-regular fa-eye"></i>
                                 <span>Details</span>
                             </button>
@@ -103,6 +103,7 @@ const displayCategories = (categories) => {
     allCategorieBtn.addEventListener('click', e => {
         removeActiveCat()
         e.target.classList.add('active-cat')
+        loadProducts()
     })
 
     for (const categorie of categories) {
@@ -117,6 +118,7 @@ const displayCategories = (categories) => {
         newdiv.addEventListener('click', e => {
             removeActiveCat()
             e.target.classList.add('active-cat')
+            loadFilter(`${categorie}`)
         })
     }
 }
@@ -126,4 +128,25 @@ const removeActiveCat = () => {
     for (btn of allBtn) {
         btn.classList.remove('active-cat')
     }
+}
+
+const loadFilter = (category) => {
+    fetch(`https://fakestoreapi.com/products/category/${category}`)
+        .then(res => res.json())
+        .then(data => { displayProducts(data, 'products-container'), console.log(data) })
+}
+
+const displayModal = id => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('my_modal').showModal()
+            document.getElementById('modal-container').innerHTML = `
+            <h1><span class="font-bold">Title:</span> ${data.title}</h1>
+                    <p class="my-2.5"><span class="font-bold">Description:</span> ${data.description}</p>
+                    <p><span class="font-bold">Price:</span> $${data.price}</p>
+                    <p><span class="font-bold">Rating:</span> <i class="fa-solid fa-star text-yellow-400"></i> <span>3.9</span></p>
+            
+            `
+        })
 }

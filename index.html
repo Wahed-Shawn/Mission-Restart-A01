@@ -50,15 +50,23 @@
         </div>
     </nav>
 
-    <section id="home-page" class="hidden">
-        <section class="h-[32rem] relative">
-            <!-- <img src="assets/banner-image.png" class="h-full w-full object-center object-cover absolute top-0 left-0"> -->
-
-            <!-- <div class="max-w-7xl mx-auto">
-            <h1 class="">Best Collection For You</h1>
-            <p>Discover the latest trends in fashion, electronics and more. Shop with confidence and style at SwiftCart.
-            </p>    
-        </div> -->
+    <section id="home-page" class="">
+        <section class="h-[32rem] w-full">
+            <div class="card bg-base-100 image-full h-full w-full rounded-none">
+                <figure class="h-full w-full">
+                    <img src="assets/banner-image.png" class="h-full w-full object-center object-cover" />
+                </figure>
+                <div class="card-body max-w-7xl w-full mx-auto px-1 flex justify-center">
+                    <div class="flex-col">
+                        <h2 class="text-5xl text-white font-bold">Best Collection For You</h2>
+                        <p class="text-xl text-gray-300 font-semibold my-4">Discover the latest trends in fashion,
+                            electronics, and more. Shop with<br>
+                            confidence and style at SwiftCart.
+                        </p>
+                        <button class="btn btn-primary w-[10rem] py-6 text-lg text-white">Shop Now</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="bg-gray-100">
@@ -158,7 +166,7 @@
     </section>
 
 
-    <section id="products-page" class=" max-w-7xl mx-auto px-1">
+    <section id="products-page" class="hidden max-w-7xl mx-auto px-1">
         <h1 class="text-center text-2xl font-bold mt-5">Our Products</h1>
 
         <div id="categories-container" class=" w-[50%] mx-auto mt-4 mb-6 flex items-center justify-evenly">
@@ -166,6 +174,30 @@
         </div>
 
         <div id="products-container" class="grid grid-cols-4 gap-5"></div>
+    </section>
+
+    <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+        <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-container" class="">
+                    <!-- <h1>Title: Mens Casual Slim Fit</h1>
+                    <p>Description: </p>
+                    <p>Price: </p>
+                    <p>Rating: <i class="fa-solid fa-star text-yellow-400"></i> <span>3.9</span></p> -->
+                </div>
+                <div class="modal-action">
+                    <button class="btn bg-blue-600 text-white">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Buy Now</span>
+                    </button>
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </section>
 
 
