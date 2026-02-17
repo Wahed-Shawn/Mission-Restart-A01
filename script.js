@@ -159,7 +159,7 @@ const displayModal = id => {
             <h1><span class="font-bold">Title:</span> ${data.title}</h1>
                     <p class="my-2.5"><span class="font-bold">Description:</span> ${data.description}</p>
                     <p><span class="font-bold">Price:</span> $${data.price}</p>
-                    <p><span class="font-bold">Rating:</span> <i class="fa-solid fa-star text-yellow-400"></i> <span>3.9</span></p>
+                    <p><span class="font-bold">Rating:</span> <i class="fa-solid fa-star text-yellow-400"></i> <span>${data.rating.rate}</span></p>
             
             `
         })
