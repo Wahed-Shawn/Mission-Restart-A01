@@ -1,21 +1,35 @@
 const home = document.getElementById('home')
+const homeMobile = document.getElementById('home-mobile')
+const productsMobile = document.getElementById('products-mobile')
 const products = document.getElementById('products')
 const homePage = document.getElementById('home-page')
 const productsPage = document.getElementById('products-page')
+const cartCount = document.getElementById('cart-count')
 
+let count = 0
+
+const handleCount = () => {
+    count++
+    cartCount.innerText = count
+    console.log(count)
+}
 
 const loadPage = (page) => {
     if (page == 'displayHomePage') {
         productsPage.classList.add('hidden')
         homePage.classList.remove('hidden')
         home.classList.add('active')
+        homeMobile.classList.add('active')
         products.classList.remove('active')
+        productsMobile.classList.remove('active')
     }
     else {
         homePage.classList.add('hidden')
         productsPage.classList.remove('hidden')
         products.classList.add('active')
+        productsMobile.classList.add('active')
         home.classList.remove('active')
+        homeMobile.classList.remove('active')
     }
 }
 
@@ -55,7 +69,7 @@ const card = (product) => {
                                 <i class="fa-regular fa-eye"></i>
                                 <span>Details</span>
                             </button>
-                            <button class="btn w-[48%] bg-blue-600 text-lg text-white hover:bg-blue-800">
+                            <button onclick="handleCount()" class="btn w-[48%] bg-blue-600 text-lg text-white hover:bg-blue-800">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span>Add</span>
                             </button>

@@ -2,6 +2,7 @@
 
 .active{
     color: blue;
+    font-weight: 600;
 }
 
 .active-cat{
